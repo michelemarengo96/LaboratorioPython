@@ -1,7 +1,13 @@
 print('Hello world!')
-print ("prova")
 
+print ('Ciao','gigi', sep=' [separatore] ')
 
-print ("test")
+var1=5
+var2=6
+ris=var1+var2
+print (ris)
 
-print ("ultimo")
+print('Valore 1: {}, Valore 2:{}, Risultato: {}'. format(var1,var2,ris) )
+
+e=input('inserisci un numero: ')
+print (e)
