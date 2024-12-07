@@ -1,13 +1,24 @@
-print('Hello world!')
+class insieme:
+  def __init__ (self, x,y):
+    self.x=x
+    self.y=y
+    self.si=1
+    
+  def __iter__(self):
+    return self
+  
+  def __next__(self):
+    if self.si>=self.y:
+        raise StopIteration
+    if self.si>=self.x: 
+       tmp=self.si
+       self.si=(3*self.si)/2
+       return tmp
 
-print ('Ciao','gigi', sep=' [separatore] ')
-
-var1=5
-var2=6
-ris=var1+var2
-print (ris)
-
-print('Valore 1: {}, Valore 2:{}, Risultato: {}'. format(var1,var2,ris) )
-
-e=input('inserisci un numero: ')
-print (e)
+    self.si=(3*self.si)/2
+    
+  
+myes=insieme (5,10)     
+        
+for s in myes:
+  print(s)     
